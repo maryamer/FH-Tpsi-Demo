@@ -232,6 +232,32 @@ h2 {
     order: 1;
   }
   .feature__image > img {
-  width: 100%;
+    width: 100%;
+  }
 }
+/* CONTACT US */
+.contact-us {
+  display: grid;
+}
+.contact-us__map{
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .contact-us {
+    grid-template-areas: "address form" "map form" "icons form";
+    grid-template-columns: 70fr 30fr;
+  }
+  .contact-us__form {
+    grid-area: form;
+  }
+  .contact-us__map {
+    display: block;
+    grid-area: map;
+  }
+  .contact-us__address {
+    grid-area: address;
+  }
+  .contact-us__icons {
+    grid-area: icons;
+  }
 }
