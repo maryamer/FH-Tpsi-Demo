@@ -239,7 +239,7 @@ h2 {
 .contact-us {
   display: grid;
 }
-.contact-us__map{
+.contact-us__map {
   display: none;
 }
 @media screen and (min-width: 1024px) {
@@ -260,4 +260,20 @@ h2 {
   .contact-us__icons {
     grid-area: icons;
   }
+}
+/* ICONS */
+.icon {
+  width: 40px;
+
+  height: 40px;
+}
+.icon-container {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #f6f6f6;
+  border-radius:100% ;
 }
