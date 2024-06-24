@@ -316,7 +316,6 @@ h2 {
     font-size: 1.4rem;
     margin-top: 1.5rem;
   }
-
 }
 
 /* SOCIAL ICONS */
@@ -395,7 +394,65 @@ textarea {
   .form-wrapper {
     padding: 5.3rem;
   }
-    .contact-us__form {
+  .contact-us__form {
     margin-right: 2rem;
+  }
+}
+
+/* FOOTER */
+.main-footer {
+  background-color: #000;
+  color: #fff;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+}
+.main-footer .footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer__item {
+  margin-bottom: 2.5rem;
+}
+.footer__item a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.footer__item h6 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.footer__item.enemad {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+.footer__enemad {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+  max-width: 86px;
+  display: flex;
+  align-items: center;
+  height: fit-content; 
+  /* align-self: center; */
+}
+.footer__enemad img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .main-footer .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer__item {
+    margin-bottom: 0;
+    margin-left: 2rem;
   }
 }
