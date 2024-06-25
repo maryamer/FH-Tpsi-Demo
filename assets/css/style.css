@@ -44,7 +44,7 @@ h2 {
     font-size: 5rem;
   }
   h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 .btn {
@@ -73,6 +73,7 @@ h2 {
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.6rem;
+    padding: 1.5rem 2rem;
   }
   .btn--block {
     font-size: 2rem;
@@ -116,15 +117,22 @@ h2 {
   .list--tick .list__item {
     margin-bottom: 2.5rem;
   }
+  .list {
+    font-size: 1.4rem;
+  }
 }
 
 /* PLAN */
-.block-plan {
+.block-plan.container {
   display: grid;
-  gap: 10rem 6rem;
+  gap: 3rem 6rem;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  margin-top: 5rem;
+}
+.plan__title {
+  margin: 2.5rem 0 1.5rem;
+  font-size: 3rem;
 }
 .plan {
   max-width: 450px;
@@ -157,7 +165,7 @@ h2 {
   margin-bottom: 2rem;
 }
 .plan__price {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .plan__billing-cycle {
   font-size: 1.4rem;
@@ -176,20 +184,27 @@ h2 {
 }
 
 @media screen and (min-width: 1024px) {
-  .block-plan {
+  .block-plan.container {
     /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
+    margin: 5rem 0;
     gap: 2rem 6rem;
   }
+  .plan {
+    font-size: 1.4rem;
+  }
   .plan .btn--block {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .plan--popular {
     transform: scale(1.1);
   }
   .plan--popular:hover {
     transform: scale(1.15);
+  }
+  .card__header,
+  .card__body {
+    padding: 2.8rem 2.3rem;
   }
 }
 
@@ -202,6 +217,7 @@ h2 {
 /* FEATURE */
 .feature {
   display: grid;
+  margin-top: 5rem;
 }
 .feature__text {
   font-size: 2rem;
@@ -220,24 +236,40 @@ h2 {
   align-items: center;
   text-align: center;
   margin-bottom: 2rem;
+  order: 2;
 }
 @media screen and (min-width: 1024px) {
   .feature {
     grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 0;
   }
   .feature__image {
     order: 2;
   }
-  .feature_detail {
+  .feature .feature__title {
+    margin-top: 1.5rem;
+  }
+  .feature.reverse .feature__image {
     order: 1;
+  }
+  .feature__detail {
+    order: 1;
+  }
+  .feature.reverse .feature__detail {
+    order: 2;
   }
   .feature__image > img {
     width: 100%;
+    aspect-ratio: 3/2;
   }
 }
 /* CONTACT US */
 .contact-us {
   display: grid;
+  margin: 2rem auto;
+  gap: 5rem;
+  text-align: left;
 }
 .contact-us__map {
   display: none;
@@ -245,7 +277,9 @@ h2 {
 @media screen and (min-width: 1024px) {
   .contact-us {
     grid-template-areas: "address form" "map form" "icons form";
-    grid-template-columns: 70fr 30fr;
+    grid-template-columns: 60fr 40fr;
+    gap: 0;
+    text-align: center;
   }
   .contact-us__form {
     grid-area: form;
@@ -256,6 +290,7 @@ h2 {
   }
   .contact-us__icons {
     grid-area: address;
+    padding: 0;
   }
   .contact-us__social {
     grid-area: icons;
@@ -289,6 +324,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: end;
+  padding: 0 10px;
 }
 
 .contact-us__icons .icon-holder {
@@ -345,12 +381,12 @@ h2 {
 .form-wrapper {
   height: 100%;
   border: 1px solid #ccc;
-  padding: 1rem;
+  padding: 3rem;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 .form-wrapper h3 {
-  margin-bottom: 5.2rem;
+  margin-bottom: 3.2rem;
   text-align: center;
 }
 
@@ -358,7 +394,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80%;
+  height: 90%;
 }
 input,
 textarea {
@@ -403,9 +439,10 @@ textarea {
 .main-footer {
   background-color: #000;
   color: #fff;
-  min-height: 250px;
+  min-height: 300px;
   display: flex;
   align-items: center;
+  padding: 10rem 0;
 }
 .main-footer .footer {
   display: flex;
@@ -666,7 +703,6 @@ textarea {
 .services__tabs {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
   overflow-x: auto;
   gap: 1rem;
   padding: 5px 15px;
@@ -701,16 +737,16 @@ textarea {
   margin: 2.5rem 0 1.5rem;
   font-size: 2rem;
 }
-.services .feature__image {
+/* .services .feature__image {
   display: none;
-}
+} */
 .services .feature__text {
-font-size: 1.8rem;
+  font-size: 1.8rem;
 }
-.tab-content{
+.tab-content {
   display: none;
 }
-.tab-content.active{
+.tab-content.active {
   display: grid;
 }
 
@@ -729,7 +765,10 @@ font-size: 1.8rem;
     font-size: 3.5rem;
     margin-bottom: 30px;
   }
-  .services .feature__image {
+  /* .services .feature__image {
     display: flex;
-  }
+  } */
+}
+.block {
+  padding: 6rem 2rem;
 }
