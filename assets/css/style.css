@@ -105,11 +105,11 @@ h2 {
   content: "";
   width: 20px;
   height: 20px;
-  background: url("/assets/images/Tick-Square.svg") no-repeat;
+  background: url("assets/images/Tick-Square.svg") no-repeat;
   padding-right: 2.5rem;
 } */
 .list--tick .list__item {
-  background: url(/assets/images/Tick-Square.svg) no-repeat right center;
+  background: url(assets/images/Tick-Square.svg) no-repeat right center;
   padding-right: 3rem;
   margin-bottom: 1.5rem;
 }
