@@ -133,6 +133,7 @@ h2 {
 .plan__title {
   margin: 2.5rem 0 1.5rem;
   font-size: 3rem;
+  color: #252b42;
 }
 .plan {
   max-width: 450px;
@@ -273,6 +274,19 @@ h2 {
 }
 .contact-us__map {
   display: none;
+}
+.container__header {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.container__header h2 {
+  margin-bottom: 1rem;
+}
+.container__header p {
+  font-size: 2rem;
+  max-width: 400px;
+  text-wrap: wrap;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1024px) {
   .contact-us {
@@ -487,6 +501,9 @@ textarea {
   .main-footer .footer {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+
+    gap: 5rem;
   }
   .footer__item {
     margin-bottom: 0;
@@ -514,7 +531,13 @@ textarea {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s;
+}
+.nav.nav__expanded {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 }
 .nav.nav__expanded .nav__list {
   max-height: 100vh;
@@ -533,9 +556,7 @@ textarea {
 .nav__item > a:hover {
   color: var(--color-primary);
 }
-.nav__toggler {
-  /* background-color: gold; */
-}
+
 .nav__item.cta {
   font-size: 1.4rem;
   border: 0;
@@ -615,7 +636,7 @@ textarea {
 }
 .hero-wrapper {
   position: absolute;
-  top: 0;
+  top: 8rem;
   width: 100%;
   height: 80vh;
   display: flex;
@@ -669,14 +690,20 @@ textarea {
   align-items: center;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
-  .hero-section {
-    height: 80vh;
+@media screen and (min-width: 1024px) {
+  .phone-mockup {
+    display: block;
   }
   .hero-wrapper {
     justify-content: flex-start;
     height: 100%;
   }
+}
+@media screen and (min-width: 768px) {
+  .hero-section {
+    height: 80vh;
+  }
+
   .intro-wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -693,9 +720,6 @@ textarea {
   }
   .intro-btn h2 {
     font-size: 2.5rem;
-  }
-  .phone-mockup {
-    display: block;
   }
 }
 
@@ -771,4 +795,97 @@ textarea {
 }
 .block {
   padding: 6rem 2rem;
+}
+.border {
+  border: 2px solid #d8d8d8;
+}
+/* TRAVELS */
+.travell {
+  margin: 10rem auto;
+  border-radius: 10px;
+}
+.travel-slides {
+  display: grid;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+}
+.travel-slides .slide-container {
+  max-height: 236px;
+  max-width: 335px;
+
+  border-radius: 32px;
+}
+.travel-slides .slide-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  object-fit: cover;
+}
+.slide__detail {
+  bottom: 8.5rem;
+}
+.slide__detail .inner {
+  background-color: #fff;
+  border-radius: 32px;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 0 20px 20px #3c3a3a1c;
+
+  /* display: flex;
+  flex-direction: column; */
+}
+.slide__title {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide__header {
+  color: #7b7b7b;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.badge.sm {
+  padding: 0 0.7em;
+  font-size: 1.1rem;
+}
+.slide__icons {
+  color: #cacaca;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.slide__icons > div {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .travel-slides {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .travel-slides {
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+  }
+}
+.relative {
+  position: relative;
+}
+.w-full {
+  width: 100%;
+}
+i {
+  color: #cacaca;
+  /* fill: #cacaca; */
 }
