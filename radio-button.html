@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      .select-type {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        gap: 4rem;
+      }
+      .select-control input[type="radio"] {
+        display: none;
+      }
+
+      .select-control {
+        cursor: pointer;
+        flex-grow: 1;
+        margin: 1rem;
+        position: relative;
+      }
+      .select-control label {
+        /* width: 100%; */
+        /* display: block; */
+        border: 2px solid #ccc;
+        border-radius: 32px;
+        padding: 1rem 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        color: #444;
+        padding-right: 3rem;
+      }
+      .select-control label::before {
+        content: "";
+        min-width: 13px;
+        min-height: 13px;
+        /* padding: 5px; */
+        position: absolute;
+        /* margin-right: 1rem; */
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        box-shadow: 0 0 0 2px #ccc;
+      }
+      .select-control input[type="radio"]:checked + label {
+        border: 2px solid orange;
+        color: orange;
+      }
+      .select-control input[type="radio"]:checked + label::before {
+        border: 2px solid white;
+        box-shadow: 0 0 0 2px orange;
+        background-color: orange;
+        color: orange;
+        min-width: 12px;
+        min-height: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container block">
+      <div class="select-type">
+        <div class="select-control">
+          <input type="radio" name="webinar" id="type-A" />
+          <label for="type-A">عمومی</label>
+        </div>
+        <div class="select-control">
+          <input type="radio" name="webinar" id="type-B" />
+          <label for="type-B">اختصاصی</label>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

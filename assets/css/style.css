@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
 }
 :root {
   --color-primary: #ff5722;
@@ -889,3 +890,5 @@ i {
   color: #cacaca;
   /* fill: #cacaca; */
 }
+
+/* SELECT */
