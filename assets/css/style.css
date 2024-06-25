@@ -661,3 +661,75 @@ textarea {
     display: block;
   }
 }
+
+/* SERVICES */
+.services__tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 5px 15px;
+}
+.services__tabs a {
+  display: block;
+  text-decoration: none;
+  color: #444;
+  text-align: center;
+}
+.services__tabs .tab > p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.services__tabs img {
+  max-width: 85px;
+}
+.services__tabs .tab {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3 ease-out;
+}
+.services__tabs .tab:hover {
+  opacity: 1;
+}
+.services__title {
+  font-size: 2.2rem;
+  font-weight: 700px;
+  margin-bottom: 20px;
+}
+.services .feature__title {
+  margin: 2.5rem 0 1.5rem;
+  font-size: 2rem;
+}
+.services .feature__image {
+  display: none;
+}
+.services .feature__text {
+font-size: 1.8rem;
+}
+.tab-content{
+  display: none;
+}
+.tab-content.active{
+  display: grid;
+}
+
+@media screen and (min-width: 1024px) {
+  .services__tabs {
+    width: 100%;
+    gap: 2px;
+  }
+  .services__tabs .tab > p {
+    font-size: 1.4rem;
+  }
+  .services__tabs img {
+    width: 100%;
+  }
+  .services__title {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+  }
+  .services .feature__image {
+    display: flex;
+  }
+}
